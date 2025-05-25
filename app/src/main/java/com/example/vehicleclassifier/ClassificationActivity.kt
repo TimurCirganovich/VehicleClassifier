@@ -25,7 +25,7 @@ import org.tensorflow.lite.DataType
 class ClassificationActivity : AppCompatActivity() {
 
     private lateinit var interpreter: Interpreter
-    private val imageLabels = listOf("BUS", "Bike", "CNG", "Easy-Bike", "Hatchback", "MPV", "Pickup", "SUV", "Sedan", "Truck")
+    private val imageLabels = listOf("Bike","Bus","CNG","Easy-Bike","Hatchback", "MPV","Pickup","SEDAN","SUV","Truck")
     private var correctPredictions = 0
     private var currentImageIndex = 0
     private val totalImages = 100
@@ -48,7 +48,6 @@ class ClassificationActivity : AppCompatActivity() {
             return
         }
 
-        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val ivImage = findViewById<ImageView>(R.id.ivImage)
         val tvTrueLabel = findViewById<TextView>(R.id.tvTrueLabel)
         val tvPredictedLabel = findViewById<TextView>(R.id.tvPredictedLabel)
